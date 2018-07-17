@@ -4,12 +4,20 @@
 
 $arrOfPeople = [
 	[
-		"name" => "person name",
+		"name" => "James",
 		"age" => 42
 	],
 	[
-		"name" => "another person name",
+		"name" => "Jen",
 		"age" => 28
+	],
+	[
+		"name" => "Bob",
+		"age" => 17
+	],
+	[
+		"name" => "Ken",
+		"age" => 53
 	]
 ];
 
