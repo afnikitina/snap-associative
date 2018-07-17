@@ -22,6 +22,7 @@ $arrOfPeople = [
 ];
 
 // print people's names
+
 function printNames($arr) {
 	if (is_array($arr)) {
 		$arrLength = count($arr);
@@ -34,7 +35,12 @@ function printNames($arr) {
 // test printNames()
 printNames($arrOfPeople);
 
-function calcAverageAgeOfPeople($arr) {
+/**
+ * A function that takes an associative array of people with names and ages and returns an average age
+ * @param array
+ * @return int
+ **/
+function calcAverageAgeOfPeople($arr): float {
 	if (is_array($arr)) {
 		$arrLength = count($arr);
 		$aveAge = 0;
@@ -42,7 +48,22 @@ function calcAverageAgeOfPeople($arr) {
 			$aveAge += $arr[$i]["age"];
 		}
 	}
-	return $aveAge;
+	return $aveAge/$arrLength;
+}
+
+/**
+ * A function that takes an associative array of people with names and ages and returns an average age
+ * @param array
+ * @return int
+ **/
+function averageAge(array $personArray): float {
+	$totalAge = 0;
+	foreach($personArray as $person) {
+		$totalAge += $person["age"];
+		echo $person["name"] ."'s age is " .$person["age"] .PHP_EOL;
+	}
+
+	return ($totalAge/count($personArray));
 }
 
 // test
